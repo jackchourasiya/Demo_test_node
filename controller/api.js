@@ -138,7 +138,7 @@ exports.addservice = (req, res) => {
     const { categoryId } = req.params;
     const { service_name, type, price, duration, service_pricetype } = req.body;
 
-    if (!service_name || !type || !price ||duration || service_pricetype) {
+    if (!service_name || !type || !price || !duration || !service_pricetype) {
         return res.status(400).json({ message: 'All details are required.' });
     }
 
